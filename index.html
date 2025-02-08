@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>UT Austin Guided Tour</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Arched Text Above the Tower -->
+    <svg id="welcome-text" width="600" height="250" viewBox="0 0 600 250">
+        <path id="curve" d="M50,180 A260,200 0 0,1 550,180" fill="transparent"/>
+        <text font-size="50" font-family="'Baloo 2', sans-serif" fill="white">
+            <textPath href="#curve" startOffset="50%" text-anchor="middle">
+                WELCOME TO UT AUSTIN!
+            </textPath>
+        </text>
+    </svg>
+
+
+
+    <!-- Tower Container with Sparkles -->
+    <div id="tower-container">
+        <img id="tower-image" src="https://cdn.glitch.global/ea06266e-b72b-42ef-8390-6981806add5b/animated-tower-three.PNG?v=1739049618371" alt="Animated UT Tower">
+        
+        <!-- Sparkles -->
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+    </div>
+
+    <!-- Start Tour Button -->
+    <a href="matthew-mcconaughey.html">
+      <button id="start-tour" onclick="startTour()">Start Tour</button>
+    </a>
+  
+
+    <script src="script.js"></script>
+</body>
+</html>
