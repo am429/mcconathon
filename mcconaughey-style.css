@@ -1,0 +1,69 @@
+/* UT Austin Burnt Orange Background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Baloo 2", sans-serif;
+  background-color: #bf5700;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Tour Container */
+#tour-container {
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  
+}
+
+/* Welcome Message */
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Adjusted McConaughey Container */
+#mcconaughey-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px; 
+}
+
+/* Adjusted McConaughey Image */
+#mcconaughey-image {
+    width: 600px; 
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Arched Text Above McConaughey */
+#arched-text {
+    display: block;
+    position: absolute;
+    top: 0%; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    opacity: 1;
+}
+
+
+
+#embed {
+  width: 100%;
+}
+
+
