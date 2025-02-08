@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Embed AI Fiddle</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="mcconaughey-style.css" />
+  </head>
+  <body>
+    <!-- Tour Screen Container -->
+    <div id="tour-container">
+      <!-- Arched Alright, Alright, Alright Text -->
+      <svg id="arched-text" width="400" height="200" viewBox="0 0 400 200">
+        <path
+          id="curve"
+          d="M50,150 A200,200 0 0,1 350,150"
+          fill="transparent"
+        />
+        <text font-size="30" font-family="'Baloo 2', sans-serif" fill="white">
+          <textPath href="#curve" startOffset="50%" text-anchor="middle">
+            Alright, Alright, Alright!
+          </textPath>
+        </text>
+      </svg>
+
+      <!-- McConaughey Image -->
+      <div id="mcconaughey-container">
+        <img
+          id="mcconaughey-image"
+          src="https://cdn.glitch.global/ea06266e-b72b-42ef-8390-6981806add5b/matthew.PNG?v=1739051676833"
+          alt="Matthew McConaughey"
+        />
+      </div>
+    </div>
+
+    <!-- Embed JSFiddle result -->
+    <div id="embed">
+      <iframe
+        width="100%"
+        height="300"
+        src="//jsfiddle.net/fourbeans/yd74xukv/71/embedded/result/?accentColor=BF5700&menuColor=BF5700&fontColor=BF5700&bodyColor=BF5700"
+        frameborder="0"
+        loading="lazy"
+        allowtransparency="true"
+        allowfullscreen="true"
+      ></iframe>
+    </div>
+
+    <script src="mcconaughey-script.js"></script>
+  </body>
+</html>
