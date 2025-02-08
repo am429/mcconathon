@@ -1,0 +1,135 @@
+/* UT Austin Burnt Orange Background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Baloo 2", sans-serif;
+    background-color: #BF5700;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Arched Welcome Text */
+#welcome-text {
+    display: block;
+    position: absolute;
+    top: 10%; 
+    left: 30%;
+    transform: translateX(-50%);
+    z-index: 10;
+    opacity: 0;
+    animation: fadeIn 2s ease-in 1s forwards, wiggle 2s infinite ease-in-out;
+}
+
+/* Adjusting Text Path Styling */
+textPath {
+    font-size: 50px; /* Larger text */
+    font-weight: bold;
+    fill: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+/* Text Wiggling Effect */
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(2deg); }
+    50% { transform: rotate(-2deg); }
+    75% { transform: rotate(2deg); }
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Tower Container */
+#tower-container {
+    position: relative;
+    width: 80vw;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* UT Tower */
+#tower-image {
+    width: 100%;
+    height: auto;
+    position: relative;
+    opacity: 1;
+    animation: slideUp 2s ease-out forwards, glowing 2s infinite alternate;
+}
+
+/* Sparkles: Randomly Appear, Change Colors, and Move Like Fireworks */
+.sparkle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 0;
+    animation: sparkleAnimation 2s infinite ease-in-out, sparkleMove 2s infinite alternate ease-in-out;
+}
+
+/* Sparkle Animation: Twinkle + Color Shift */
+@keyframes sparkleAnimation {
+    0% { opacity: 0; transform: scale(0.5); background-color: #FFD700; }
+    25% { opacity: 1; transform: scale(1.2); background-color: #FFA500; }
+    50% { opacity: 0.8; transform: scale(1); background-color: #FFF5BA; }
+    75% { opacity: 1; transform: scale(1.3); background-color: #FFDD44; }
+    100% { opacity: 0; transform: scale(0.5); background-color: #FFD700; }
+}
+
+/* Sparkles Move Upward Like Fireworks */
+@keyframes sparkleMove {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-50px); }
+}
+
+/* Sparkle Burst When Tower Fully Appears */
+@keyframes sparkleBurst {
+    0% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(2); }
+    100% { opacity: 0; transform: scale(0.5); }
+}
+
+/* Position Random Sparkles */
+.sparkle:nth-child(1) { top: 10%; left: 30%; animation-delay: 0.3s; }
+.sparkle:nth-child(2) { top: 15%; left: 70%; animation-delay: 0.5s; }
+.sparkle:nth-child(3) { top: 30%; left: 50%; animation-delay: 0.8s; }
+.sparkle:nth-child(4) { top: 5%; left: 80%; animation-delay: 1.2s; }
+.sparkle:nth-child(5) { top: 25%; left: 20%; animation-delay: 1.5s; }
+.sparkle:nth-child(6) { top: 40%; left: 60%; animation-delay: 1.7s; }
+.sparkle:nth-child(7) { top: 8%; left: 45%; animation-delay: 1.9s; }
+.sparkle:nth-child(8) { top: 35%; left: 10%; animation-delay: 2.2s; }
+.sparkle:nth-child(9) { top: 12%; left: 90%; animation-delay: 2.5s; }
+.sparkle:nth-child(10) { top: 50%; left: 35%; animation-delay: 2.8s; }
+
+/* Start Tour Button */
+#start-tour {
+    margin-top: 20px;
+    padding: 12px 25px; 
+    font-size: 30px;
+    font-family: "Baloo 2", sans-serif; /* Match the Welcome Text */
+    font-weight: bold;
+    color: white;
+    background-color: transparent; /* Keep background transparent */
+    border: 2px solid white; /* Thinner border */
+    border-radius: 8px; /* Slightly rounded edges */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Button Hover Effect */
+#start-tour:hover {
+    background-color: #FFD700; /* Turns golden */
+    color: #BF5700; /* Burnt orange text */
+    border-color: #FFD700; /* Change border to gold */
+}
